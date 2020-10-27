@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 //secret number
 const secretNumber = Math.trunc(Math.random()*20)+1;
@@ -14,20 +14,25 @@ document.querySelector('.check').addEventListener('click',function(){
 
     if(!guess){
        document.querySelector('.message').textContent="we need a number";
-    }else if(guess > secretNumber ){
-
-        if(score > 1){ document.querySelector('.message').textContent="to high";
-    document.querySelector('.score').textContent=score;
-    score--;} else{
-               document.querySelector('.message').textContent="you lost the game";
-
+    }else if (guess === secretNumber){
+      document.querySelector('.message').textContent = "Bon numero";
     }
-   
-   
+    else if(guess > secretNumber ){
+
+        if(score >1){ document.querySelector('.message').textContent="to high";
+      score--;
+        document.querySelector('.score').textContent=score;
+    } else{
+                document.querySelector('.message').textContent="you lost the game";
+                document.querySelector('.score').textContent=0;
+    }
     }else if(guess < secretNumber){
-    document.querySelector('.message').textContent="to low";
-      document.querySelector('.score').textContent=score;
-    score--;
-   
+        if(score >1){ document.querySelector('.message').textContent="to low";
+         score--;
+        document.querySelector('.score').textContent=score;
+          }  else{
+                document.querySelector('.message').textContent="you lost the game";
+                document.querySelector('.score').textContent=0;
+    }
 }
-})
+});
