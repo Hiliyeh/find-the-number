@@ -44,12 +44,12 @@ document.querySelector('.check').addEventListener('click',function(){
 document.querySelector('.again').addEventListener('click',function(){
   
 //secret number
-const secretNumber = Math.trunc(Math.random()*20)+1;
+  secretNumber; 
 //score
 let score=20;
- document.querySelector('.message').textContent = "Start guessing...";
-   document.querySelector('.score').textContent=score;
-   document.querySelector('.number').textContent='?';
-   document.querySelector('.guess').value='';
-   document.querySelector('body').style.backgroundColor='#222'
+   document.querySelector('.message').textContent = "Start guessing...";
+   document.querySelector('.score').textContent = score;
+   document.querySelector('.number').textContent = '?';
+   document.querySelector('.guess').value = '';
+   document.querySelector('body').style.backgroundColor = '#222';
 })
