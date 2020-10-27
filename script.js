@@ -16,7 +16,9 @@ document.querySelector('.check').addEventListener('click',function(){
        document.querySelector('.message').textContent="we need a number";
     }else if (guess === secretNumber){
       document.querySelector('.message').textContent = "Bon numero";
+      document.querySelector('body').style.backgroundColor = "#60b347"; 
     }
+    //high 
     else if(guess > secretNumber ){
 
         if(score >1){ document.querySelector('.message').textContent="to high";
@@ -26,7 +28,9 @@ document.querySelector('.check').addEventListener('click',function(){
                 document.querySelector('.message').textContent="you lost the game";
                 document.querySelector('.score').textContent=0;
     }
-    }else if(guess < secretNumber){
+    }
+    //low
+    else if(guess < secretNumber){
         if(score >1){ document.querySelector('.message').textContent="to low";
          score--;
         document.querySelector('.score').textContent=score;
