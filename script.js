@@ -1,6 +1,6 @@
 'use strict';
 
-//secret number
+//secret number between (1 and 20)
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
 //score
 let score = 20;
@@ -16,7 +16,7 @@ document.querySelector('.check').addEventListener('click', function () {
     document.querySelector('.message').textContent = 'Bon numero';
     document.querySelector('body').style.backgroundColor = '#60b347';
   }
-  //high
+  //input to high
   else if (guess > secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'to high';
@@ -27,7 +27,7 @@ document.querySelector('.check').addEventListener('click', function () {
       document.querySelector('.score').textContent = 0;
     }
   }
-  //low
+  //input to low
   else if (guess < secretNumber) {
     if (score > 1) {
       document.querySelector('.message').textContent = 'to low';
