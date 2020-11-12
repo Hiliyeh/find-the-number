@@ -1,5 +1,4 @@
 'use strict';
-
 //secret number between (1 and 20) random choice
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 
@@ -47,7 +46,7 @@ document.querySelector('.check').addEventListener('click', function () {
 // restart game
 document.querySelector('.again').addEventListener('click', function () {
   //secret number
-  secretNumber;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
 
   //score
   let score = 20;
