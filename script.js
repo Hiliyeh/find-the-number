@@ -12,8 +12,6 @@ function displayMessage(message) {
   document.querySelector('.message').textContent = message;
 }
 
-document.querySelector('.number').textContent = secretNumber;
-
 document.querySelector('.check').addEventListener('click', function () {
   const guess = Number(document.querySelector('.guess').value);
 
@@ -22,8 +20,9 @@ document.querySelector('.check').addEventListener('click', function () {
   }
   //player win
   else if (guess === secretNumber) {
-    displayMessage('bon numero');
+    displayMessage('You Fund it !');
     document.querySelector('body').style.backgroundColor = '#60b347';
+    document.querySelector('.number').textContent = secretNumber;
 
     //Highscore
     if (score > highscore) {
